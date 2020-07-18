@@ -80,14 +80,14 @@ router.post(
           res
             .status(400)
             //лучше не писать что пароль не верный, а писать что данные не верны
-            .json({ message: "Неверный пароль , попробуйте снова." })
+            .json({ message: "Неверный пароль, попробуйте снова ..." })
         );
       }
       //create TOKEN
       const token = jwt.sign({ userId: user.id }, config.get("jwtSecret"), {
         expiresIn: "1h",
       });
-      //отвечаем польз-ю , статгс по умолчанию (200) логин завершен
+      //отвечаем польз-ю , статус по умолчанию (200) логин завершен
       res.json({ token, userId: user.id });
       //
     } catch (e) {
