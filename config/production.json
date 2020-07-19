@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "jwtSecret": "mern jwt key ",
+  "mongoUri": "mongodb+srv://Daniil_Sapielkin:danik123@cluster0.2vkca.mongodb.net/app?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
+}
